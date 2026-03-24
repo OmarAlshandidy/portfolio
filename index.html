@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Alshandidy - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         /* Custom Animations to replace Framer Motion */
         .fade-in-up {
@@ -13,27 +15,39 @@
             transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
+
         .fade-in-left {
             opacity: 0;
             transform: translateX(-50px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
+
         .fade-in-right {
             opacity: 0;
             transform: translateX(50px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
+
         .is-visible {
             opacity: 1;
             transform: translate(0);
         }
-        
+
         /* Hero Background Animation */
         @keyframes gradient-bg {
-            0% { background-position: 0% 0%; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0% 0%; }
+            0% {
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
         }
+
         .animate-bg {
             background-size: 400% 400%;
             animation: gradient-bg 15s ease infinite;
@@ -41,29 +55,42 @@
 
         /* Hero Blob Animation */
         @keyframes blob-bounce {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(20px, -20px) scale(1.1); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(20px, -20px) scale(1.1);
+            }
         }
+
         .animate-blob {
             animation: blob-bounce 10s infinite alternate ease-in-out;
         }
     </style>
 </head>
+
 <body class="bg-black text-white font-sans antialiased overflow-x-hidden">
 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
-                OA.
+            <a href="#"
+                class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
+                Omar Alshandidy
             </a>
 
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="text-white/70 hover:text-white transition-colors text-sm font-medium">About</a>
-                <a href="#skills" class="text-white/70 hover:text-white transition-colors text-sm font-medium">Skills</a>
-                <a href="#experience" class="text-white/70 hover:text-white transition-colors text-sm font-medium">Experience</a>
-                <a href="#education" class="text-white/70 hover:text-white transition-colors text-sm font-medium">Education</a>
-                <a href="#projects" class="text-white/70 hover:text-white transition-colors text-sm font-medium">Projects</a>
-                <a href="#contact" class="text-white/70 hover:text-white transition-colors text-sm font-medium">Contact</a>
+                <a href="#skills"
+                    class="text-white/70 hover:text-white transition-colors text-sm font-medium">Skills</a>
+                <a href="#education"
+                    class="text-white/70 hover:text-white transition-colors text-sm font-medium">Education</a>
+                <a href="#projects"
+                    class="text-white/70 hover:text-white transition-colors text-sm font-medium">Projects</a>
+                <a href="#contact"
+                    class="text-white/70 hover:text-white transition-colors text-sm font-medium">Contact</a>
             </div>
 
             <button id="mobile-menu-btn" class="md:hidden text-white">
@@ -71,38 +98,49 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-white/10 overflow-hidden transition-all duration-300">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-black/95 border-t border-white/10 overflow-hidden transition-all duration-300">
             <div class="px-6 py-4 space-y-4 flex flex-col">
                 <a href="#about" class="text-white/70 hover:text-white transition-colors py-2 mobile-link">About</a>
                 <a href="#skills" class="text-white/70 hover:text-white transition-colors py-2 mobile-link">Skills</a>
-                <a href="#experience" class="text-white/70 hover:text-white transition-colors py-2 mobile-link">Experience</a>
-                <a href="#education" class="text-white/70 hover:text-white transition-colors py-2 mobile-link">Education</a>
-                <a href="#projects" class="text-white/70 hover:text-white transition-colors py-2 mobile-link">Projects</a>
+                <a href="#education"
+                    class="text-white/70 hover:text-white transition-colors py-2 mobile-link">Education</a>
+                <a href="#projects"
+                    class="text-white/70 hover:text-white transition-colors py-2 mobile-link">Projects</a>
                 <a href="#contact" class="text-white/70 hover:text-white transition-colors py-2 mobile-link">Contact</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-indigo-950/20 to-black overflow-hidden pt-20">
+        <section
+            class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-indigo-950/20 to-black overflow-hidden pt-20">
             <div class="absolute inset-0">
-                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.08] via-purple-500/[0.05] to-rose-500/[0.08] animate-bg"></div>
-                <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl animate-blob"></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.08] via-purple-500/[0.05] to-rose-500/[0.08] animate-bg">
+                </div>
+                <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl animate-blob">
+                </div>
             </div>
 
             <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center fade-in-up">
-                
+
                 <div class="mb-12 relative inline-flex justify-center items-center group">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 rounded-full blur-3xl opacity-40 group-hover:opacity-75 transition-opacity duration-700 animate-pulse"></div>
-                    
-                    <div class="relative p-[4px] rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 z-10 transform transition-transform duration-500 group-hover:scale-105 shadow-[0_0_40px_rgba(99,102,241,0.3)]">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 rounded-full blur-3xl opacity-40 group-hover:opacity-75 transition-opacity duration-700 animate-pulse">
+                    </div>
+
+                    <div
+                        class="relative p-[4px] rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 z-10 transform transition-transform duration-500 group-hover:scale-105 shadow-[0_0_40px_rgba(99,102,241,0.3)]">
                         <div class="bg-black rounded-full p-1">
-                            <img src="image/5.jpg" alt="Omar Alshandidy" class="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover object-top pointer-events-none" />
+                            <img src="image/5.jpg" alt="Omar Alshandidy"
+                                class="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover object-top pointer-events-none" />
                         </div>
                     </div>
                 </div>
 
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-200 to-purple-200">
+                <h1
+                    class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-200 to-purple-200">
                     Omar Alshandidy
                 </h1>
 
@@ -111,30 +149,36 @@
                 </p>
 
                 <p class="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-12">
-                    I build scalable, spatially-enabled web applications. Adept at applying Clean Architecture, SOLID principles, and Agile methodologies.
+                    I build scalable, spatially-enabled web applications. Adept at applying Clean Architecture, SOLID
+                    principles, and Agile methodologies.
                 </p>
 
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 rounded-full font-semibold transition-all hover:scale-105 flex items-center gap-2">
+                    <a href="#contact"
+                        class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 rounded-full font-semibold transition-all hover:scale-105 flex items-center gap-2">
                         Get In Touch <i data-lucide="arrow-right" class="w-5 h-5"></i>
                     </a>
-                    <a href="#projects" class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full font-semibold transition-all hover:scale-105">
+                    <a href="#projects"
+                        class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full font-semibold transition-all hover:scale-105">
                         View Projects
                     </a>
                 </div>
 
                 <div class="flex justify-center gap-6 mt-12">
-                    <a href="https://github.com/OmarAlshandidy" target="_blank" class="text-white/60 hover:text-white transition-colors">
+                    <a href="https://github.com/OmarAlshandidy" target="_blank"
+                        class="text-white/60 hover:text-white transition-colors">
                         <i data-lucide="github" class="w-6 h-6"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/omar-alshandidy" target="_blank" class="text-white/60 hover:text-white transition-colors">
+                    <a href="https://www.linkedin.com/in/omar-alshandidy" target="_blank"
+                        class="text-white/60 hover:text-white transition-colors">
                         <i data-lucide="linkedin" class="w-6 h-6"></i>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-24 bg-gradient-to-b from-black to-indigo-950/20 text-white border-t border-white/5">
+        <section id="about"
+            class="py-24 bg-gradient-to-b from-black to-indigo-950/20 text-white border-t border-white/5">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16 fade-in-up">
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
@@ -144,10 +188,15 @@
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="fade-in-left">
                         <p class="text-lg text-white/80 leading-relaxed mb-6">
-                            Results-driven Full-Stack .NET Developer and GIS Specialist with a strong foundation in building scalable, spatially-enabled web applications. Proficient in designing robust backend architectures using ASP.NET Core, RESTful APIs, and Entity Framework, seamlessly integrated with advanced geospatial technologies.
+                            Results-driven Full-Stack .NET Developer and GIS Specialist with a strong foundation in
+                            building scalable, spatially-enabled web applications. Proficient in designing robust
+                            backend architectures using ASP.NET Core, RESTful APIs, and Entity Framework, seamlessly
+                            integrated with advanced geospatial technologies.
                         </p>
                         <p class="text-lg text-white/80 leading-relaxed">
-                            Whether it's creating conflict-free booking engines with dynamic pricing, or architecting robust remote sensing platforms using Google Earth Engine and PostGIS, I thrive at the intersection of complex backend logic and interactive geospatial visualization.
+                            Whether it's creating conflict-free booking engines with dynamic pricing, or architecting
+                            robust remote sensing platforms using Google Earth Engine and PostGIS, I thrive at the
+                            intersection of complex backend logic and interactive geospatial visualization.
                         </p>
                     </div>
 
@@ -185,120 +234,79 @@
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 fade-in-up" style="transition-delay: 100ms;">
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 fade-in-up"
+                        style="transition-delay: 100ms;">
                         <h3 class="text-xl font-semibold mb-4 text-indigo-300">Backend Frameworks</h3>
                         <ul class="space-y-2">
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> C# & .NET Core (6-9)</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Entity Framework Core</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> RESTful APIs</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Python / Flask</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> SignalR</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> C# & .NET Core (6-9)</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> Entity Framework Core</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> RESTful APIs</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> Python / Flask</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> SignalR</li>
                         </ul>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 fade-in-up" style="transition-delay: 200ms;">
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 fade-in-up"
+                        style="transition-delay: 200ms;">
                         <h3 class="text-xl font-semibold mb-4 text-indigo-300">GIS Expertise</h3>
                         <ul class="space-y-2">
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Google Earth Engine</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> PostGIS / NTS</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> ArcMap & ArcGIS Pro</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> QGIS & AutoCAD</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Leaflet.js</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> Google Earth Engine</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> PostGIS / NTS</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> ArcMap & ArcGIS Pro</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> QGIS & AutoCAD</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> Leaflet.js</li>
                         </ul>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 fade-in-up" style="transition-delay: 300ms;">
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 fade-in-up"
+                        style="transition-delay: 300ms;">
                         <h3 class="text-xl font-semibold mb-4 text-indigo-300">Architecture & DB</h3>
                         <ul class="space-y-2">
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Clean Architecture</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> SOLID Principles</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> SQL Server / Postgres</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Redis Caching</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> JWT / OAuth</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> Clean Architecture</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> SOLID Principles</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> SQL Server / Postgres</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> Redis Caching</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> JWT / OAuth</li>
                         </ul>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 fade-in-up" style="transition-delay: 400ms;">
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 fade-in-up"
+                        style="transition-delay: 400ms;">
                         <h3 class="text-xl font-semibold mb-4 text-indigo-300">Frontend</h3>
                         <ul class="space-y-2">
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> HTML5 & CSS3</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> JavaScript</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Bootstrap 5</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> AJAX</li>
-                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Responsive UI</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> HTML5 & CSS3</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> JavaScript</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> Bootstrap 5</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> AJAX</li>
+                            <li class="flex items-center gap-2 text-white/80"><i data-lucide="check-circle"
+                                    class="w-4 h-4 text-green-400"></i> Responsive UI</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="py-24 bg-gradient-to-b from-black to-indigo-950/20 text-white">
+        <section id="education"
+            class="py-24 bg-gradient-to-b from-black to-indigo-950/20 text-white border-t border-white/5">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16 fade-in-up">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Work Experience</h2>
-                    <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
-                </div>
-
-                <div class="space-y-8">
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-left">
-                        <div class="flex flex-wrap justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Backend Developer ASP.NET Core</h3>
-                                <p class="text-lg text-indigo-300">Route IT Center</p>
-                            </div>
-                            <div class="text-left md:text-right mt-2 md:mt-0">
-                                <p class="text-white/60">Oct 2024 - May 2025</p>
-                                <p class="text-white/60 flex items-center gap-1 md:justify-end"><i data-lucide="map-pin" class="w-3 h-3"></i> Remote, Egypt</p>
-                            </div>
-                        </div>
-                        <p class="text-white/80 mb-4">Intensive backend development role focusing on modern .NET practices and building robust enterprise APIs.</p>
-                        <ul class="space-y-2">
-                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="sparkles" class="w-4 h-4 text-yellow-400 mt-1 shrink-0"></i> Mastered advanced API development with ASP.NET Core</li>
-                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="sparkles" class="w-4 h-4 text-yellow-400 mt-1 shrink-0"></i> Implemented Clean Architecture and SOLID design principles</li>
-                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="sparkles" class="w-4 h-4 text-yellow-400 mt-1 shrink-0"></i> Applied standard security protocols including JWT and OAuth</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-left" style="transition-delay: 100ms;">
-                        <div class="flex flex-wrap justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Programming Fundamentals</h3>
-                                <p class="text-lg text-indigo-300">Route IT Center</p>
-                            </div>
-                            <div class="text-left md:text-right mt-2 md:mt-0">
-                                <p class="text-white/60">May 2024 - Oct 2024</p>
-                                <p class="text-white/60 flex items-center gap-1 md:justify-end"><i data-lucide="map-pin" class="w-3 h-3"></i> Alexandria, Egypt</p>
-                            </div>
-                        </div>
-                        <p class="text-white/80 mb-4">Solidified foundational programming concepts, algorithms, and logical problem-solving skills.</p>
-                        <ul class="space-y-2">
-                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="sparkles" class="w-4 h-4 text-yellow-400 mt-1 shrink-0"></i> Mastered core programming structures</li>
-                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="sparkles" class="w-4 h-4 text-yellow-400 mt-1 shrink-0"></i> Developed strong algorithmic thinking</li>
-                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="sparkles" class="w-4 h-4 text-yellow-400 mt-1 shrink-0"></i> Collaborated on fundamental coding projects</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-left" style="transition-delay: 200ms;">
-                        <div class="flex flex-wrap justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white mb-2">Summer Training in Surveying</h3>
-                                <p class="text-lg text-indigo-300">Al-Fadaly Surveying Company</p>
-                            </div>
-                            <div class="text-left md:text-right mt-2 md:mt-0">
-                                <p class="text-white/60">Aug 2024 - Sep 2024</p>
-                                <p class="text-white/60 flex items-center gap-1 md:justify-end"><i data-lucide="map-pin" class="w-3 h-3"></i> Egypt</p>
-                            </div>
-                        </div>
-                        <p class="text-white/80 mb-4">Practical field experience applying surveying principles and gathering spatial data.</p>
-                        <ul class="space-y-2">
-                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="sparkles" class="w-4 h-4 text-yellow-400 mt-1 shrink-0"></i> Collected and processed field spatial data</li>
-                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="sparkles" class="w-4 h-4 text-yellow-400 mt-1 shrink-0"></i> Applied theoretical surveying knowledge to real-world scenarios</li>
-                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="sparkles" class="w-4 h-4 text-yellow-400 mt-1 shrink-0"></i> Worked extensively with surveying equipment and software</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="py-24 bg-gradient-to-b from-indigo-950/20 to-black text-white">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-16 fade-in-up">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Education</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Education & Training</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
                 </div>
 
@@ -306,132 +314,354 @@
                     <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-up">
                         <i data-lucide="graduation-cap" class="w-12 h-12 text-indigo-400 mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Diploma in Geographic Information Science</h3>
-                        <p class="text-lg text-indigo-300 mb-2">Arab Academy for Science, Technology and Maritime Transport</p>
+                        <p class="text-lg text-indigo-300 mb-2">Arab Academy for Science, Technology and Maritime
+                            Transport</p>
                         <p class="text-white/60 mb-4">Mar 2024 - Present</p>
-                        <p class="text-white/70">Specialized post-graduate studies focusing on advanced GIS applications, cartography, and spatial analytics.</p>
+                        <p class="text-white/70">Specialized post-graduate studies focusing on advanced GIS
+                            applications, cartography, and spatial analytics.</p>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-up" style="transition-delay: 100ms;">
+
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-up"
+                        style="transition-delay: 100ms;">
                         <i data-lucide="graduation-cap" class="w-12 h-12 text-indigo-400 mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Bachelor of Arts in Surveying and GIS</h3>
                         <p class="text-lg text-indigo-300 mb-2">Tanta University</p>
                         <p class="text-white/60 mb-4">Oct 2022 - Present</p>
-                        <p class="text-white/70">Core academic foundation in geographic information systems, spatial data management, and surveying.</p>
+                        <p class="text-white/70">Core academic foundation in geographic information systems, spatial
+                            data management, and surveying.</p>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-up" style="transition-delay: 200ms;">
+
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-up"
+                        style="transition-delay: 400ms;">
                         <i data-lucide="graduation-cap" class="w-12 h-12 text-indigo-400 mb-4"></i>
                         <h3 class="text-xl font-bold text-white mb-2">Web Designer Training (120 Hours)</h3>
                         <p class="text-lg text-indigo-300 mb-2">NTI, Digital Egypt Youth (DEY)</p>
-                        <p class="text-white/60 mb-4">2025</p>
-                        <p class="text-white/70">Mastered modern frontend technologies to design responsive, mobile-friendly interfaces.</p>
+                        <p class="text-white/60 mb-4">Aug 2025 - Oct 2025</p>
+                        <p class="text-white/70">Mastered modern frontend technologies to design responsive,
+                            mobile-friendly interfaces.</p>
                     </div>
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-up"
+                        style="transition-delay: 200ms;">
+                        <i data-lucide="graduation-cap" class="w-12 h-12 text-indigo-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Diploma in Backend Development ASP.NET Core</h3>
+                        <p class="text-lg text-indigo-300 mb-2">Route IT Center</p>
+                        <p class="text-white/60 mb-4">Oct 2024 - May 2025</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="check-circle"
+                                    class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i> Mastered advanced API
+                                development with ASP.NET Core</li>
+                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="check-circle"
+                                    class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i> Implemented Clean Architecture
+                                and SOLID design principles</li>
+                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="check-circle"
+                                    class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i> Applied standard security
+                                protocols including JWT and OAuth</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 fade-in-up"
+                        style="transition-delay: 300ms;">
+                        <i data-lucide="graduation-cap" class="w-12 h-12 text-indigo-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Diploma in Programming Fundamentals</h3>
+                        <p class="text-lg text-indigo-300 mb-2">Route IT Center</p>
+                        <p class="text-white/60 mb-4">May 2024 - Oct 2024</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="check-circle"
+                                    class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i> Mastered core programming
+                                structures</li>
+                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="check-circle"
+                                    class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i> Developed strong algorithmic
+                                thinking</li>
+                            <li class="flex items-start gap-2 text-white/70"><i data-lucide="check-circle"
+                                    class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i> Collaborated on fundamental
+                                coding projects</li>
+                        </ul>
+                    </div>
+
+
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="py-24 bg-gradient-to-b from-black to-indigo-950/20 text-white border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-6">
+        <section id="projects"
+            class="py-24 bg-gradient-to-b from-black to-indigo-950/20 text-white border-t border-white/5 relative">
+            <div
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <div class="text-center mb-16 fade-in-up">
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-8"></div>
-                    
+
                     <div class="flex flex-wrap justify-center gap-3" id="filter-buttons">
-                        <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium transition-all bg-indigo-500 text-white" data-filter="all">All</button>
-                        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-white/10 text-white/70 hover:bg-white/20" data-filter=".NET">.NET</button>
-                        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-white/10 text-white/70 hover:bg-white/20" data-filter="GIS">GIS</button>
-                        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-white/10 text-white/70 hover:bg-white/20" data-filter="ASP.NET">ASP.NET</button>
-                        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all bg-white/10 text-white/70 hover:bg-white/20" data-filter="SQL Server Spatial">SQL Server Spatial</button>
+                        <button
+                            class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-indigo-500 text-white shadow-[0_0_15px_rgba(99,102,241,0.4)]"
+                            data-filter="all">All</button>
+                        <button
+                            class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-white/5 text-white/70 hover:bg-white/15 hover:text-white border border-white/10"
+                            data-filter="ASP.NET APIs">ASP.NET APIs</button>
+                        <button
+                            class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-white/5 text-white/70 hover:bg-white/15 hover:text-white border border-white/10"
+                            data-filter="GIS">GIS</button>
+                        <button
+                            class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-white/5 text-white/70 hover:bg-white/15 hover:text-white border border-white/10"
+                            data-filter="ASP.NET MVC">ASP.NET MVC</button>
+                        <button
+                            class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-white/5 text-white/70 hover:bg-white/15 hover:text-white border border-white/10"
+                            data-filter="SQL Server Spatial">SQL Server Spatial</button>
                     </div>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8" id="projects-container">
-                    <div class="project-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-indigo-400/50 transition-all flex flex-col h-full fade-in-up" data-tech=".NET GIS ASP.NET">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop" alt="Workspace Booking System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-white mb-2">Workspace Booking System</h3>
-                            <p class="text-white/70 mb-4 flex-grow">Architected a comprehensive workspace booking platform strictly adhering to Clean Architecture. Integrated Leaflet.js with NetTopologySuite to render interactive maps, dynamic table availability via AJAX, and server-side pricing algorithms.</p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">.NET 9</span>
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">MVC</span>
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">GIS</span>
+                <div class="grid md:grid-cols-2 gap-10" id="projects-container">
+
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech=" GIS ASP.NET MVC SQL Server Spatial">
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+
+                            <img src="image/BookingWorkspace/2.png" alt="Workspace 1"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/BookingWorkspace/3.png" alt="Workspace 2"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/BookingWorkspace/4.png" alt="Workspace 3"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/BookingWorkspace/1.png" alt="Workspace 3"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20">
+                                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                            </button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20">
+                                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                            </button>
+
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
                             </div>
-                            <div class="flex gap-4 mt-auto">
-                                <a href="https://github.com/OmarAlshandidy" target="_blank" class="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
-                                    <i data-lucide="github" class="w-4 h-4"></i> Code
+                        </div>
+
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                Workspace Booking System (Tanta Study Hub)</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">Architected a comprehensive
+                                workspace booking platform strictly adhering to Clean Architecture. Integrated
+                                Leaflet.js with NetTopologySuite to render interactive maps, dynamic table availability
+                                via AJAX, and server-side pricing algorithms.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-indigo-500/10 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/20">.NET
+                                    9</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-purple-500/10 text-purple-300 text-xs font-medium rounded-full border border-purple-500/20">MVC</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-pink-500/10 text-pink-300 text-xs font-medium rounded-full border border-pink-500/20">GIS</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-blue-500/10 text-blue-300 text-xs font-medium rounded-full border border-blue-500/20">SQL
+                                    Spatial</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-green-500/10 text-green-300 text-xs font-medium rounded-full border border-green-500/20">Leaflet.js</span>
+                            </div>
+
+                            <div class="flex mt-auto pt-4 border-t border-white/10">
+                                <a href="https://tanta-study-hub.runasp.net/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group">
+                                    <i data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors"></i>
+                                    View Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Tanta Study Hub -->
+
+                    <!-- Start Metro -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech=" ASP.NET MVC SQL Server Spatial GIS">
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+
+                            <img src="image/metro/1.png" alt="Metro 1"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/metro/2.png" alt="Metro 2"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/metro/3.png" alt="Metro 3"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/metro/4.png" alt="Metro 4"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                Alexandria Metro System</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">Developed a scalable GIS-based web
+                                platform for managing interactive routing, trip planning, and proximity services.
+                                Leveraged SQL Server Spatial and custom routing algorithms.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-indigo-500/10 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/20">.NET
+                                    8</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-blue-500/10 text-blue-300 text-xs font-medium rounded-full border border-blue-500/20">SQL
+                                    Spatial</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-purple-500/10 text-purple-300 text-xs font-medium rounded-full border border-purple-500/20">MVC</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-pink-500/10 text-pink-300 text-xs font-medium rounded-full border border-pink-500/20">GIS</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-green-500/10 text-green-300 text-xs font-medium rounded-full border border-green-500/20">Leaflet.js</span>
+                            </div>
+
+                            <div class="flex mt-auto pt-4 border-t border-white/10">
+                                <a href="https://metro-alexandria.runasp.net/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group">
+                                    <i data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors"></i>
+                                    View Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Metro -->
+
+
+                    <!-- RS Analysis -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech="ASP.NET MVC  GIS">
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+
+                            <img src="image/RsAnalaysis/1.png" alt="RS 1"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/RsAnalaysis/2.png" alt="RS 2"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/RsAnalaysis/3.png" alt="RS 3"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/RsAnalaysis/4.png" alt="RS 4"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/RsAnalaysis/5.png" alt="RS 5"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/RsAnalaysis/6.png" alt="RS 6"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+
+                            <img src="image/RsAnalaysis/7.png" alt="RS 7"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/RsAnalaysis/8.png" alt="RS 8"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/RsAnalaysis/9.png" alt="RS 9"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                RSAnalysis - Remote Sensing</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">Engineered a full-stack platform
+                                combining ASP.NET Core with a Python Flask API to process Sentinel-2 imagery via GEE.
+                                Implemented async background tasks for NDVI computation.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-indigo-500/10 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/20">ASP.NET</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-teal-500/10 text-teal-300 text-xs font-medium rounded-full border border-teal-500/20">Earth
+                                    Engine</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-cyan-500/10 text-cyan-300 text-xs font-medium rounded-full border border-cyan-500/20">PostGIS</span>
+                            </div>
+
+                            <div class="flex mt-auto pt-4 border-t border-white/10">
+                                <a href="https://alshandidy-rs-analysis.runasp.net/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group">
+                                    <i data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors"></i>
+                                    View Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End RS Analysis -->
+
+                    <!-- Talabat Web API -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech="ASP.NET APIs ">
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+
+                            <video src="video/talabat/demo.mp4"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out"
+                                autoplay muted  playsinline>
+                            </video>
+                            <img src="image/talabat/1.jpg" alt="Talabat 1"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/talabat/2.jpg" alt="Talabat 2"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                Talabat Web API</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">Built a comprehensive E-Commerce
+                                RESTful API utilizing Onion Architecture. Optimized retrieval via the Specification
+                                pattern, enhanced performance using Redis caching for baskets.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-indigo-500/10 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/20">ASP.NET
+                                    Core 8</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-rose-500/10 text-rose-300 text-xs font-medium rounded-full border border-rose-500/20">Onion
+                                    Arch</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-red-500/10 text-red-300 text-xs font-medium rounded-full border border-red-500/20">Redis</span>
+                            </div>
+
+                            <div class="flex mt-auto pt-4 border-t border-white/10">
+                                <a href="https://github.com/OmarAlshandidy/Store.git" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors">
+                                    <i data-lucide="github" class="w-5 h-5"></i> View Source Code
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-indigo-400/50 transition-all flex flex-col h-full fade-in-up" data-tech=".NET SQL Server Spatial">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=800&auto=format&fit=crop" alt="Alexandria Metro System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-white mb-2">Alexandria Metro System</h3>
-                            <p class="text-white/70 mb-4 flex-grow">Developed a scalable GIS-based web platform for managing interactive routing, trip planning, and proximity services. Leveraged SQL Server Spatial and custom routing algorithms.</p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">.NET 8</span>
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">SQL Server Spatial</span>
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">Leaflet.js</span>
-                            </div>
-                            <div class="flex gap-4 mt-auto">
-                                <a href="https://github.com/OmarAlshandidy" target="_blank" class="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
-                                    <i data-lucide="github" class="w-4 h-4"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-indigo-400/50 transition-all flex flex-col h-full fade-in-up" data-tech="ASP.NET GIS">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop" alt="RSAnalysis - Remote Sensing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-white mb-2">RSAnalysis - Remote Sensing</h3>
-                            <p class="text-white/70 mb-4 flex-grow">Engineered a full-stack platform combining ASP.NET Core with a Python Flask API to process Sentinel-2 imagery via GEE. Implemented async background tasks for NDVI computation.</p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">ASP.NET</span>
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">Google Earth Engine</span>
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">PostGIS</span>
-                            </div>
-                            <div class="flex gap-4 mt-auto">
-                                <a href="https://github.com/OmarAlshandidy" target="_blank" class="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
-                                    <i data-lucide="github" class="w-4 h-4"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-indigo-400/50 transition-all flex flex-col h-full fade-in-up" data-tech="ASP.NET .NET">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&auto=format&fit=crop" alt="Talabat Web API" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-white mb-2">Talabat Web API</h3>
-                            <p class="text-white/70 mb-4 flex-grow">Built a comprehensive E-Commerce RESTful API utilizing Onion Architecture. Optimized retrieval via the Specification pattern, enhanced performance using Redis caching for baskets.</p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">ASP.NET Core 8</span>
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">Onion Arch</span>
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-500/30">Redis</span>
-                            </div>
-                            <div class="flex gap-4 mt-auto">
-                                <a href="https://github.com/OmarAlshandidy" target="_blank" class="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
-                                    <i data-lucide="github" class="w-4 h-4"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
-
-        <section id="contact" class="py-24 bg-gradient-to-b from-indigo-950/20 to-black text-white border-t border-white/5">
+        <section id="contact"
+            class="py-24 bg-gradient-to-b from-black to-indigo-950/20 text-white border-t border-white/5">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16 fade-in-up">
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h2>
@@ -444,40 +674,51 @@
                 <div class="grid lg:grid-cols-2 gap-12">
                     <div class="fade-in-left">
                         <div id="form-container">
-                          <form id="contact-form" class="space-y-6" action="https://formspree.io/f/xgongygl" method="POST">
-    <div class="grid md:grid-cols-2 gap-6">
-        <div>
-            <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all">
-        </div>
-        <div>
-            <input type="email" id="email" name="email" placeholder="Email Address" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all">
-        </div>
-    </div>
-    <input type="text" id="subject" name="subject" placeholder="Subject (Optional)" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all">
-    <div>
-        <textarea id="message" name="message" placeholder="Your Message" rows="6" required class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all resize-none"></textarea>
-    </div>
-    <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium py-4 px-6 rounded-xl transition-all flex items-center justify-center gap-2">
-        <i data-lucide="send" class="h-5 w-5"></i> <span id="btn-text">Send Message</span>
-    </button>
-</form>
+                            <form id="contact-form" class="space-y-6" action="https://formspree.io/f/xgongygl"
+                                method="POST">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <input type="text" id="name" name="name" placeholder="Your Name" required
+                                            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all">
+                                    </div>
+                                    <div>
+                                        <input type="email" id="email" name="email" placeholder="Email Address" required
+                                            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all">
+                                    </div>
+                                </div>
+                                <input type="text" id="subject" name="subject" placeholder="Subject (Optional)"
+                                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all">
+                                <div>
+                                    <textarea id="message" name="message" placeholder="Your Message" rows="6" required
+                                        class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all resize-none"></textarea>
+                                </div>
+                                <button type="submit" id="submit-btn"
+                                    class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium py-4 px-6 rounded-xl transition-all flex items-center justify-center gap-2">
+                                    <i data-lucide="send" class="h-5 w-5"></i> <span id="btn-text">Send Message</span>
+                                </button>
+                            </form>
                         </div>
 
-                        <div id="success-message" class="hidden text-center py-12 bg-white/5 rounded-xl border border-white/10">
+                        <div id="success-message"
+                            class="hidden text-center py-12 bg-white/5 rounded-xl border border-white/10">
                             <i data-lucide="check-circle" class="w-20 h-20 text-green-400 mx-auto mb-6"></i>
                             <h3 class="text-2xl font-bold mb-4">Message Sent!</h3>
                             <p class="text-white/70 mb-6">Thank you for reaching out. I'll get back to you soon!</p>
-                            <button id="reset-form-btn" class="px-6 py-3 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 transition-all">
+                            <button id="reset-form-btn"
+                                class="px-6 py-3 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 transition-all">
                                 Send Another Message
                             </button>
                         </div>
                     </div>
 
                     <div class="space-y-6 fade-in-right">
-                        <a href="mailto:OmarAlshandidy@gmail.com" class="block p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
+                        <a href="mailto:OmarAlshandidy@gmail.com"
+                            class="block p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center shrink-0">
-                                    <i data-lucide="mail" class="w-6 h-6 text-indigo-400 group-hover:scale-110 transition-transform"></i>
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center shrink-0">
+                                    <i data-lucide="mail"
+                                        class="w-6 h-6 text-indigo-400 group-hover:scale-110 transition-transform"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-white mb-1">Email</h4>
@@ -485,10 +726,13 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="tel:+201272454500" class="block p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
+                        <a href="tel:+201272454500"
+                            class="block p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center shrink-0">
-                                    <i data-lucide="phone" class="w-6 h-6 text-indigo-400 group-hover:scale-110 transition-transform"></i>
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center shrink-0">
+                                    <i data-lucide="phone"
+                                        class="w-6 h-6 text-indigo-400 group-hover:scale-110 transition-transform"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-white mb-1">Phone</h4>
@@ -498,8 +742,10 @@
                         </a>
                         <div class="block p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl group">
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center shrink-0">
-                                    <i data-lucide="map-pin" class="w-6 h-6 text-indigo-400 group-hover:scale-110 transition-transform"></i>
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin"
+                                        class="w-6 h-6 text-indigo-400 group-hover:scale-110 transition-transform"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-white mb-1">Location</h4>
@@ -514,13 +760,16 @@
     </main>
 
     <footer class="py-8 bg-black border-t border-white/10">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <p class="text-white/60">
                 &copy; <span id="year"></span> Omar Alshandidy. All rights reserved.
             </p>
             <div class="flex gap-4">
-                <a href="https://github.com/OmarAlshandidy" target="_blank" class="text-white/60 hover:text-white"><i data-lucide="github" class="w-5 h-5"></i></a>
-                <a href="https://www.linkedin.com/in/omar-alshandidy" target="_blank" class="text-white/60 hover:text-white"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="https://github.com/OmarAlshandidy" target="_blank" class="text-white/60 hover:text-white"><i
+                        data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="https://www.linkedin.com/in/omar-alshandidy" target="_blank"
+                    class="text-white/60 hover:text-white"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
             </div>
         </div>
     </footer>
@@ -554,7 +803,7 @@
 
         menuBtn.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', () => {
-            if(isMenuOpen) toggleMenu();
+            if (isMenuOpen) toggleMenu();
         }));
 
         // 3. Scroll Animations (Intersection Observer to replace Framer Motion)
@@ -620,53 +869,163 @@
         const btnText = document.getElementById('btn-text');
         const resetBtn = document.getElementById('reset-form-btn');
 
-       contactForm.addEventListener('submit', async (e) => {
-    // منع الصفحة من عمل Refresh
-    e.preventDefault();
-    
-    // تأكيد إن الحقول مش فاضية
-    if (!contactForm.checkValidity()) return;
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-    // تشغيل الأنيميشن بتاع التحميل
-    submitBtn.disabled = true;
-    submitBtn.classList.add('opacity-50');
-    btnText.textContent = "Sending...";
+            if (!contactForm.checkValidity()) return;
 
-    // تجميع البيانات من الفورم
-    const formData = new FormData(contactForm);
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-50');
+            btnText.textContent = "Sending...";
 
-    try {
-        // إرسال البيانات للرابط الخاص بك في Formspree
-        const response = await fetch('https://formspree.io/f/xgongygl', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch('https://formspree.io/f/xgongygl', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formContainer.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+                    contactForm.reset();
+                } else {
+                    alert("Oops! There was a problem sending your message.");
+                }
+            } catch (error) {
+                alert("Network error. Please try again later.");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-50');
+                btnText.textContent = "Send Message";
             }
         });
-
-        if (response.ok) {
-            // إخفاء الفورم وإظهار رسالة النجاح
-            formContainer.classList.add('hidden');
-            successMessage.classList.remove('hidden');
-            contactForm.reset();
-        } else {
-            alert("Oops! There was a problem sending your message.");
-        }
-    } catch (error) {
-        alert("Network error. Please try again later.");
-    } finally {
-        // إرجاع الزرار لشكله الطبيعي بعد ما يخلص
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('opacity-50');
-        btnText.textContent = "Send Message";
-    }
-});
 
         resetBtn.addEventListener('click', () => {
             successMessage.classList.add('hidden');
             formContainer.classList.remove('hidden');
         });
+       // --- Advanced Smart Image/Video Slider Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const sliders = document.querySelectorAll('.image-slider');
+
+    sliders.forEach(slider => {
+        const mediaElements = slider.querySelectorAll('.slider-img'); // بيجيب الصور والفيديوهات
+        const dotsContainer = slider.querySelector('.slider-dots');
+        const prevBtn = slider.querySelector('.slider-prev');
+        const nextBtn = slider.querySelector('.slider-next');
+        
+        let currentIndex = 0;
+        let slideTimeout; // هنستخدم Timeout بدل Interval عشان نتحكم في الوقت ديناميكياً
+        
+        if (mediaElements.length <= 1) {
+            if(prevBtn) prevBtn.style.display = 'none';
+            if(nextBtn) nextBtn.style.display = 'none';
+            return;
+        }
+
+        // إنشاء النقاط (Dots)
+        mediaElements.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('h-1.5', 'rounded-full', 'transition-all', 'duration-300');
+            
+            if (index === 0) {
+                dot.classList.add('bg-indigo-500', 'w-6');
+            } else {
+                dot.classList.add('bg-white/30', 'w-1.5', 'hover:bg-white/80');
+            }
+
+            dot.addEventListener('click', (e) => {
+                e.preventDefault();
+                goToSlide(index);
+            });
+            
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll('button');
+
+        function goToSlide(index) {
+            clearTimeout(slideTimeout); // نوقف أي عداد شغال حالياً
+
+            // لو العنصر الحالي فيديو، نعمله إيقاف (Pause) عشان صوته أو حركته تقف في الخلفية
+            if (mediaElements[currentIndex].tagName.toLowerCase() === 'video') {
+                mediaElements[currentIndex].pause();
+            }
+
+            // إخفاء العنصر الحالي
+            mediaElements[currentIndex].classList.remove('opacity-100');
+            mediaElements[currentIndex].classList.add('opacity-0');
+            mediaElements[currentIndex].style.zIndex = "0";
+
+            dots[currentIndex].classList.remove('bg-indigo-500', 'w-6');
+            dots[currentIndex].classList.add('bg-white/30', 'w-1.5');
+
+            // تحديث الاندكس
+            currentIndex = index;
+            if (currentIndex >= mediaElements.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = mediaElements.length - 1;
+
+            // إظهار العنصر الجديد
+            const currentMedia = mediaElements[currentIndex];
+            currentMedia.classList.remove('opacity-0');
+            currentMedia.classList.add('opacity-100');
+            currentMedia.style.zIndex = "10";
+
+            dots[currentIndex].classList.remove('bg-white/30', 'w-1.5');
+            dots[currentIndex].classList.add('bg-indigo-500', 'w-6');
+
+            // تحديد وقت الشريحة بناءً على نوعها (صورة أو فيديو)
+            handleMediaPlayback(currentMedia);
+        }
+
+        function handleMediaPlayback(media) {
+            if (media.tagName.toLowerCase() === 'video') {
+                // لو فيديو: شغله من الأول، ولما يخلص اقلب للي بعده
+                media.currentTime = 0;
+                media.play().catch(e => console.log("Autoplay prevented by browser")); // تشغيل الفيديو
+                
+                // ايفينت بيشتغل لما الفيديو يخلص
+                media.onended = () => {
+                    goToSlide(currentIndex + 1);
+                };
+            } else {
+                // لو صورة: استنى 4.5 ثواني وبعدين اقلب
+                slideTimeout = setTimeout(() => {
+                    goToSlide(currentIndex + 1);
+                }, 4500);
+            }
+        }
+
+        // أزرار الـ Next و Prev
+        if(nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                goToSlide(currentIndex + 1);
+            });
+        }
+
+        if(prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                goToSlide(currentIndex - 1);
+            });
+        }
+
+        // تشغيل أول شريحة عند تحميل الصفحة
+        handleMediaPlayback(mediaElements[0]);
+    });
+    
+    // تفعيل الأيقونات
+    if(typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+});
     </script>
 </body>
+
 </html>
