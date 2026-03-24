@@ -8,68 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Custom Animations to replace Framer Motion */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .fade-in-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .fade-in-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .is-visible {
-            opacity: 1;
-            transform: translate(0);
-        }
-
-        /* Hero Background Animation */
-        @keyframes gradient-bg {
-            0% {
-                background-position: 0% 0%;
-            }
-
-            50% {
-                background-position: 100% 100%;
-            }
-
-            100% {
-                background-position: 0% 0%;
-            }
-        }
-
-        .animate-bg {
-            background-size: 400% 400%;
-            animation: gradient-bg 15s ease infinite;
-        }
-
-        /* Hero Blob Animation */
-        @keyframes blob-bounce {
-
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            50% {
-                transform: translate(20px, -20px) scale(1.1);
-            }
-        }
-
-        .animate-blob {
-            animation: blob-bounce 10s infinite alternate ease-in-out;
-        }
-    </style>
+    
 </head>
 
 <body class="bg-black text-white font-sans antialiased overflow-x-hidden">
@@ -410,11 +349,14 @@
                         <button
                             class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-white/5 text-white/70 hover:bg-white/15 hover:text-white border border-white/10"
                             data-filter="SQL Server Spatial">SQL Server Spatial</button>
+                        <button
+                            class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-white/5 text-white/70 hover:bg-white/15 hover:text-white border border-white/10"
+                            data-filter="Frontend">Frontend</button>
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-10" id="projects-container">
-
+                    <!-- Start Tanta Study Hub -->
                     <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
                         data-tech=" GIS ASP.NET MVC SQL Server Spatial">
                         <div
@@ -613,7 +555,7 @@
 
                             <video src="video/talabat/demo.mp4"
                                 class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out"
-                                autoplay muted  playsinline>
+                                autoplay muted playsinline>
                             </video>
                             <img src="image/talabat/1.jpg" alt="Talabat 1"
                                 class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
@@ -656,6 +598,422 @@
                             </div>
                         </div>
                     </div>
+                    <!-- End Talabat Web API -->
+
+                    <!-- Start Company Management System -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech="ASP.NET MVC .NET">
+
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+
+                            <img src="image/CompanyManagment/1 (2).png" alt="WebGis Map View"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/CompanyManagment/2.png" alt="WebGis Dashboard"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+
+                            <img src="image/CompanyManagment/4.png" alt="WebGis Code"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                Company Management System</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">A full-stack ASP.NET Core MVC
+                                application featuring complete CRUD operations, Role-Based Access Control, and
+                                real-world OAuth (Google, Facebook, LinkedIn). Built utilizing a 3-Tier Architecture,
+                                Repository Pattern, and EF Core.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-indigo-500/10 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/20">ASP.NET
+                                    MVC</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-purple-500/10 text-purple-300 text-xs font-medium rounded-full border border-purple-500/20">EF
+                                    Core</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-blue-500/10 text-blue-300 text-xs font-medium rounded-full border border-blue-500/20">Identity
+                                    & OAuth</span>
+                            </div>
+
+                            <div class="flex gap-6 mt-auto pt-4 border-t border-white/10">
+                                <a href="https://github.com/OmarAlshandidy/Company_G04.git" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    Code
+                                </a>
+                                <a href="https://mvccompay-omar.runasp.net/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link">
+                                    <i data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    View Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Company Management System -->
+
+                    <!-- Start Web Gis -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech="ASP.NET MVC GIS .NET">
+
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+
+                            <img src="image/WebGis/1 (3).png" alt="WebGis Map View"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/WebGis/3 (2).png" alt="WebGis Dashboard"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                WebGis – Expatriate Students Support</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">An interactive Geographic
+                                Information System (GIS) helping students in Alexandria find nearby essential services.
+                                Features Leaflet.js maps, GeoJSON integration, location-based filtering, and role-based
+                                CRUD within a clean N-Tier architecture.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-indigo-500/10 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/20">ASP.NET
+                                    MVC</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-emerald-500/10 text-emerald-300 text-xs font-medium rounded-full border border-emerald-500/20">Leaflet.js
+                                    & GeoJSON</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-amber-500/10 text-amber-300 text-xs font-medium rounded-full border border-amber-500/20">N-Tier
+                                    Arch</span>
+                            </div>
+
+                            <div class="flex gap-6 mt-auto pt-4 border-t border-white/10">
+                                <a href="https://github.com/OmarAlshandidy/WebGis.git" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link">
+                                    <i data-lucide="github"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    Code
+                                </a>
+                                <a href="https://housing-g02.runasp.net/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link">
+                                    <i data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    View Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Web Gis -->
+
+                    <!-- Frontend Projects -->
+
+                    <!-- Start Games Store  -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech="Frontend Bootstrap HTML CSS JS">
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+                            <img src="image/FrontEnd/GameStore1.png"
+                                alt="Games Store 1"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/GameStore2.png"
+                                alt="Games Store 2"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/GameStore3.png"
+                                alt="Games Store 3"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                Games Store</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">A responsive and visually appealing
+                                gaming storefront built as part of the NTI Web Designer track. Focuses on modern UI/UX
+                                principles, smooth interactions, and structured layout using Bootstrap.</p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-orange-500/10 text-orange-400 text-xs font-medium rounded-full border border-orange-500/20">HTML5</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-blue-500/10 text-blue-400 text-xs font-medium rounded-full border border-blue-500/20">CSS3</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-purple-500/10 text-purple-400 text-xs font-medium rounded-full border border-purple-500/20">Bootstrap</span>
+                            </div>
+                            <div class="flex gap-6 mt-auto pt-4 border-t border-white/10">
+                                <a href="https://github.com/OmarAlshandidy/Games-Store.git" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="github"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    Code</a>
+                                <a href="https://omaralshandidy.github.io/Games-Store/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    View Live</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Games Store  -->
+
+                    <!-- Start Weather App -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech="Frontend HTML CSS JS">
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+                            <img src="image/FrontEnd/Weather.jpg"
+                                alt="Weather App 1"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="https://images.unsplash.com/photo-1530908295418-a12e326966ba?w=800&auto=format&fit=crop"
+                                alt="Weather App 2"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-0 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                Weather App</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">A dynamic web application that
+                                fetches and displays real-time weather data. Developed using Vanilla JavaScript to
+                                handle API requests and update the DOM dynamically with a clean interface.</p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-yellow-500/10 text-yellow-400 text-xs font-medium rounded-full border border-yellow-500/20">JavaScript</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-orange-500/10 text-orange-400 text-xs font-medium rounded-full border border-orange-500/20">HTML5</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-teal-500/10 text-teal-400 text-xs font-medium rounded-full border border-teal-500/20">REST
+                                    API</span>
+                            </div>
+                            <div class="flex gap-6 mt-auto pt-4 border-t border-white/10">
+                                <a href="https://github.com/OmarAlshandidy/Weather.git" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="github"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    Code</a>
+                                <a href="https://omaralshandidy.github.io/Weather/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    View Live</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Weather App -->
+
+                    <!-- Start Bonne & Clyde -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech="Frontend Bootstrap HTML CSS">
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+                            <img src="image/FrontEnd/BonneClyde1.png"
+                                alt="Bonnie & Clyde 1"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/BonneClyde2.png"
+                                alt="Bonnie & Clyde 2"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/BonneClyde3.png"
+                                alt="Bonnie & Clyde 3"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/BonneClyde4.png"
+                                alt="Bonnie & Clyde 4"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                Bonnie & Clyde</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">A highly stylized, responsive
+                                landing page crafted during the NTI training. Demonstrates proficiency in grid systems,
+                                flexbox, and precise CSS styling for pixel-perfect design.</p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-orange-500/10 text-orange-400 text-xs font-medium rounded-full border border-orange-500/20">HTML5</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-blue-500/10 text-blue-400 text-xs font-medium rounded-full border border-blue-500/20">CSS3</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-purple-500/10 text-purple-400 text-xs font-medium rounded-full border border-purple-500/20">Bootstrap</span>
+                            </div>
+                            <div class="flex gap-6 mt-auto pt-4 border-t border-white/10">
+                                <a href="https://github.com/OmarAlshandidy/Bonne-Clyde" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="github"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    Code</a>
+                                <a href="https://omaralshandidy.github.io/Bonne-Clyde/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    View Live</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Bonnie & Clyde -->
+
+                    <!-- Start Foker   -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech="Frontend HTML CSS JS Bootstrap">
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+                            <img src="image/FrontEnd/Foker1.png"
+                                alt="Foker 1"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/Foker2.png"
+                                alt="Foker 2"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/Foker3.png"
+                                alt="Foker 3"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/Foker4.png"
+                                alt="Foker 4"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/Foker5.png"
+                                alt="Foker 5"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/Foker6.png"
+                                alt="Foker 6"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                Foker</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">A modern, fully responsive personal
+                                portfolio and agency template. Integrated with interactive JavaScript elements and
+                                smooth scrolling to enhance the overall user experience.</p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-yellow-500/10 text-yellow-400 text-xs font-medium rounded-full border border-yellow-500/20">JavaScript</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-blue-500/10 text-blue-400 text-xs font-medium rounded-full border border-blue-500/20">CSS3</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-purple-500/10 text-purple-400 text-xs font-medium rounded-full border border-purple-500/20">Bootstrap</span>
+                            </div>
+                            <div class="flex gap-6 mt-auto pt-4 border-t border-white/10">
+                                <a href="https://github.com/OmarAlshandidy/Foker.git" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="github"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    Code</a>
+                                <a href="https://omaralshandidy.github.io/Foker/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    View Live</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Foker -->
+
+                    <!-- Start Engage -->
+                    <div class="project-card group bg-[#0a0a0f] border border-white/10 hover:border-indigo-500/50 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(99,102,241,0.3)] flex flex-col h-full fade-in-up"
+                        data-tech="Frontend Bootstrap HTML CSS">
+                        <div
+                            class="relative h-72 bg-[#050505] overflow-hidden image-slider group/slider flex items-center justify-center shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+                            <img src="image/FrontEnd/engage1.png"
+                                alt="Engage 1"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/engage2.png"
+                                alt="Engage 2"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+                            <img src="image/FrontEnd/engage3.png"
+                                alt="Engage 3"
+                                class="slider-img absolute w-full h-full object-contain p-4 opacity-100 transition-opacity duration-700 ease-in-out">
+
+                            <button
+                                class="slider-prev absolute left-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                            <button
+                                class="slider-next absolute right-3 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md opacity-0 group-hover/slider:opacity-100 transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-20 border border-white/20"><i
+                                    data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20 slider-dots">
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                            <h3
+                                class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                                Engage</h3>
+                            <p class="text-white/60 mb-6 flex-grow leading-relaxed">A corporate business frontend
+                                template developed during the NTI track. Showcases mastery of layout structuring,
+                                typography hierarchy, and effective use of Bootstrap utility classes.</p>
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3.5 py-1.5 bg-orange-500/10 text-orange-400 text-xs font-medium rounded-full border border-orange-500/20">HTML5</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-blue-500/10 text-blue-400 text-xs font-medium rounded-full border border-blue-500/20">CSS3</span>
+                                <span
+                                    class="px-3.5 py-1.5 bg-purple-500/10 text-purple-400 text-xs font-medium rounded-full border border-purple-500/20">Bootstrap</span>
+                            </div>
+
+                            <div class="flex gap-6 mt-auto pt-4 border-t border-white/10">
+                                <a href="https://github.com/OmarAlshandidy" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="github"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    Code</a>
+                                <a href="https://omaralshandidy.github.io/engage/" target="_blank"
+                                    class="flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-colors group/link"><i
+                                        data-lucide="external-link"
+                                        class="w-5 h-5 text-indigo-400 group-hover/link:text-indigo-300 transition-colors"></i>
+                                    View Live</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Engage -->
+                    <!-- End Frontend Projects -->
+
 
                 </div>
             </div>
@@ -909,122 +1267,122 @@
             successMessage.classList.add('hidden');
             formContainer.classList.remove('hidden');
         });
-       // --- Advanced Smart Image/Video Slider Logic ---
-document.addEventListener('DOMContentLoaded', () => {
-    const sliders = document.querySelectorAll('.image-slider');
+        // --- Advanced Smart Image/Video Slider Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliders = document.querySelectorAll('.image-slider');
 
-    sliders.forEach(slider => {
-        const mediaElements = slider.querySelectorAll('.slider-img'); // بيجيب الصور والفيديوهات
-        const dotsContainer = slider.querySelector('.slider-dots');
-        const prevBtn = slider.querySelector('.slider-prev');
-        const nextBtn = slider.querySelector('.slider-next');
-        
-        let currentIndex = 0;
-        let slideTimeout; // هنستخدم Timeout بدل Interval عشان نتحكم في الوقت ديناميكياً
-        
-        if (mediaElements.length <= 1) {
-            if(prevBtn) prevBtn.style.display = 'none';
-            if(nextBtn) nextBtn.style.display = 'none';
-            return;
-        }
+            sliders.forEach(slider => {
+                const mediaElements = slider.querySelectorAll('.slider-img'); // بيجيب الصور والفيديوهات
+                const dotsContainer = slider.querySelector('.slider-dots');
+                const prevBtn = slider.querySelector('.slider-prev');
+                const nextBtn = slider.querySelector('.slider-next');
 
-        // إنشاء النقاط (Dots)
-        mediaElements.forEach((_, index) => {
-            const dot = document.createElement('button');
-            dot.classList.add('h-1.5', 'rounded-full', 'transition-all', 'duration-300');
-            
-            if (index === 0) {
-                dot.classList.add('bg-indigo-500', 'w-6');
-            } else {
-                dot.classList.add('bg-white/30', 'w-1.5', 'hover:bg-white/80');
-            }
+                let currentIndex = 0;
+                let slideTimeout; // هنستخدم Timeout بدل Interval عشان نتحكم في الوقت ديناميكياً
 
-            dot.addEventListener('click', (e) => {
-                e.preventDefault();
-                goToSlide(index);
+                if (mediaElements.length <= 1) {
+                    if (prevBtn) prevBtn.style.display = 'none';
+                    if (nextBtn) nextBtn.style.display = 'none';
+                    return;
+                }
+
+                // إنشاء النقاط (Dots)
+                mediaElements.forEach((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('h-1.5', 'rounded-full', 'transition-all', 'duration-300');
+
+                    if (index === 0) {
+                        dot.classList.add('bg-indigo-500', 'w-6');
+                    } else {
+                        dot.classList.add('bg-white/30', 'w-1.5', 'hover:bg-white/80');
+                    }
+
+                    dot.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        goToSlide(index);
+                    });
+
+                    dotsContainer.appendChild(dot);
+                });
+
+                const dots = dotsContainer.querySelectorAll('button');
+
+                function goToSlide(index) {
+                    clearTimeout(slideTimeout); // نوقف أي عداد شغال حالياً
+
+                    // لو العنصر الحالي فيديو، نعمله إيقاف (Pause) عشان صوته أو حركته تقف في الخلفية
+                    if (mediaElements[currentIndex].tagName.toLowerCase() === 'video') {
+                        mediaElements[currentIndex].pause();
+                    }
+
+                    // إخفاء العنصر الحالي
+                    mediaElements[currentIndex].classList.remove('opacity-100');
+                    mediaElements[currentIndex].classList.add('opacity-0');
+                    mediaElements[currentIndex].style.zIndex = "0";
+
+                    dots[currentIndex].classList.remove('bg-indigo-500', 'w-6');
+                    dots[currentIndex].classList.add('bg-white/30', 'w-1.5');
+
+                    // تحديث الاندكس
+                    currentIndex = index;
+                    if (currentIndex >= mediaElements.length) currentIndex = 0;
+                    if (currentIndex < 0) currentIndex = mediaElements.length - 1;
+
+                    // إظهار العنصر الجديد
+                    const currentMedia = mediaElements[currentIndex];
+                    currentMedia.classList.remove('opacity-0');
+                    currentMedia.classList.add('opacity-100');
+                    currentMedia.style.zIndex = "10";
+
+                    dots[currentIndex].classList.remove('bg-white/30', 'w-1.5');
+                    dots[currentIndex].classList.add('bg-indigo-500', 'w-6');
+
+                    // تحديد وقت الشريحة بناءً على نوعها (صورة أو فيديو)
+                    handleMediaPlayback(currentMedia);
+                }
+
+                function handleMediaPlayback(media) {
+                    if (media.tagName.toLowerCase() === 'video') {
+                        // لو فيديو: شغله من الأول، ولما يخلص اقلب للي بعده
+                        media.currentTime = 0;
+                        media.play().catch(e => console.log("Autoplay prevented by browser")); // تشغيل الفيديو
+
+                        // ايفينت بيشتغل لما الفيديو يخلص
+                        media.onended = () => {
+                            goToSlide(currentIndex + 1);
+                        };
+                    } else {
+                        // لو صورة: استنى 4.5 ثواني وبعدين اقلب
+                        slideTimeout = setTimeout(() => {
+                            goToSlide(currentIndex + 1);
+                        }, 4500);
+                    }
+                }
+
+                // أزرار الـ Next و Prev
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        goToSlide(currentIndex + 1);
+                    });
+                }
+
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        goToSlide(currentIndex - 1);
+                    });
+                }
+
+                // تشغيل أول شريحة عند تحميل الصفحة
+                handleMediaPlayback(mediaElements[0]);
             });
-            
-            dotsContainer.appendChild(dot);
+
+            // تفعيل الأيقونات
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
         });
-
-        const dots = dotsContainer.querySelectorAll('button');
-
-        function goToSlide(index) {
-            clearTimeout(slideTimeout); // نوقف أي عداد شغال حالياً
-
-            // لو العنصر الحالي فيديو، نعمله إيقاف (Pause) عشان صوته أو حركته تقف في الخلفية
-            if (mediaElements[currentIndex].tagName.toLowerCase() === 'video') {
-                mediaElements[currentIndex].pause();
-            }
-
-            // إخفاء العنصر الحالي
-            mediaElements[currentIndex].classList.remove('opacity-100');
-            mediaElements[currentIndex].classList.add('opacity-0');
-            mediaElements[currentIndex].style.zIndex = "0";
-
-            dots[currentIndex].classList.remove('bg-indigo-500', 'w-6');
-            dots[currentIndex].classList.add('bg-white/30', 'w-1.5');
-
-            // تحديث الاندكس
-            currentIndex = index;
-            if (currentIndex >= mediaElements.length) currentIndex = 0;
-            if (currentIndex < 0) currentIndex = mediaElements.length - 1;
-
-            // إظهار العنصر الجديد
-            const currentMedia = mediaElements[currentIndex];
-            currentMedia.classList.remove('opacity-0');
-            currentMedia.classList.add('opacity-100');
-            currentMedia.style.zIndex = "10";
-
-            dots[currentIndex].classList.remove('bg-white/30', 'w-1.5');
-            dots[currentIndex].classList.add('bg-indigo-500', 'w-6');
-
-            // تحديد وقت الشريحة بناءً على نوعها (صورة أو فيديو)
-            handleMediaPlayback(currentMedia);
-        }
-
-        function handleMediaPlayback(media) {
-            if (media.tagName.toLowerCase() === 'video') {
-                // لو فيديو: شغله من الأول، ولما يخلص اقلب للي بعده
-                media.currentTime = 0;
-                media.play().catch(e => console.log("Autoplay prevented by browser")); // تشغيل الفيديو
-                
-                // ايفينت بيشتغل لما الفيديو يخلص
-                media.onended = () => {
-                    goToSlide(currentIndex + 1);
-                };
-            } else {
-                // لو صورة: استنى 4.5 ثواني وبعدين اقلب
-                slideTimeout = setTimeout(() => {
-                    goToSlide(currentIndex + 1);
-                }, 4500);
-            }
-        }
-
-        // أزرار الـ Next و Prev
-        if(nextBtn) {
-            nextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                goToSlide(currentIndex + 1);
-            });
-        }
-
-        if(prevBtn) {
-            prevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                goToSlide(currentIndex - 1);
-            });
-        }
-
-        // تشغيل أول شريحة عند تحميل الصفحة
-        handleMediaPlayback(mediaElements[0]);
-    });
-    
-    // تفعيل الأيقونات
-    if(typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-});
     </script>
 </body>
 
